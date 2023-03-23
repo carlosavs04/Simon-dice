@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simon_dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="simon_dice.png" translatesAutoresizingMaskIntoConstraints="NO" id="3HZ-5j-m8F">
+                                <rect key="frame" x="77" y="283" width="276" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="imvSplash" destination="3HZ-5j-m8F" id="JkJ-M8-p0m"/>
+                        <segue destination="fe2-Yo-RCo" kind="presentation" identifier="sgSplash" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="zAA-lI-cOO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.74418604651163" y="3.8626609442060089"/>
+        </scene>
+        <!--Juego View Controller-->
+        <scene sceneID="HKn-E9-gTi">
+            <objects>
+                <viewController id="fe2-Yo-RCo" customClass="JuegoViewController" customModule="Simon_dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rkL-cd-EaC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simón Dice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w9-C9-l9k">
+                                <rect key="frame" x="115.66666666666669" y="69" width="199" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="4aS-MJ-vti"/>
+                                    <constraint firstAttribute="width" constant="199" id="kMf-Pv-4yF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5m-AX-lOm">
+                                <rect key="frame" x="32.666666666666657" y="158" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ji6-Aw-EtF"/>
+                                    <constraint firstAttribute="height" constant="150" id="U4U-Zg-dnR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpInside" id="8Dy-kO-foU"/>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpOutside" id="A3D-IJ-JHQ"/>
+                                    <action selector="encenderBtn:" destination="fe2-Yo-RCo" eventType="touchDown" id="6uf-xG-Nh8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" tag="1" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7s-TF-tof">
+                                <rect key="frame" x="247.66666666666663" y="158" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Qd8-3p-6ab"/>
+                                    <constraint firstAttribute="width" constant="150" id="UAo-6H-A2S"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpOutside" id="8I3-D9-PcA"/>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpInside" id="kWp-LJ-0eF"/>
+                                    <action selector="encenderBtn:" destination="fe2-Yo-RCo" eventType="touchDown" id="dlU-uD-94L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acx-6D-lRz">
+                                <rect key="frame" x="136.66666666666666" y="827" width="156.99999999999997" height="51"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="43B-4P-mCc"/>
+                                    <constraint firstAttribute="width" constant="157" id="D0Q-Hx-efb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Jugar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpInside" id="L4t-wN-07f"/>
+                                    <action selector="empezarJuego" destination="fe2-Yo-RCo" eventType="touchUpInside" id="HKz-4F-SVI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" tag="2" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykr-RP-Dzl">
+                                <rect key="frame" x="32.666666666666657" y="348" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="T12-Ax-r7d"/>
+                                    <constraint firstAttribute="height" constant="150" id="xd1-fL-XEj"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpInside" id="0O3-dI-ibU"/>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpOutside" id="zi3-Nd-eOF"/>
+                                    <action selector="encenderBtn:" destination="fe2-Yo-RCo" eventType="touchDown" id="REf-IS-dos"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" tag="3" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sr-w4-jQ4">
+                                <rect key="frame" x="247.66666666666663" y="348" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WLU-ZC-ryT"/>
+                                    <constraint firstAttribute="width" constant="150" id="i7a-Kr-Ezu"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpOutside" id="D8C-GF-bNS"/>
+                                    <action selector="apagarBtn:" destination="fe2-Yo-RCo" eventType="touchUpInside" id="Uro-rz-5qK"/>
+                                    <action selector="encenderBtn:" destination="fe2-Yo-RCo" eventType="touchDown" id="M3w-fW-vHa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GII-K8-bUU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8sr-w4-jQ4" firstAttribute="centerX" secondItem="rkL-cd-EaC" secondAttribute="centerX" multiplier="1.5" id="88s-Rw-kJ0"/>
+                            <constraint firstItem="ykr-RP-Dzl" firstAttribute="top" secondItem="G5m-AX-lOm" secondAttribute="bottom" constant="40" id="CeK-F9-00a"/>
+                            <constraint firstItem="U7s-TF-tof" firstAttribute="top" secondItem="8w9-C9-l9k" secondAttribute="bottom" constant="40" id="DqS-bi-7d5"/>
+                            <constraint firstItem="acx-6D-lRz" firstAttribute="centerX" secondItem="rkL-cd-EaC" secondAttribute="centerX" id="UUE-yD-azm"/>
+                            <constraint firstItem="G5m-AX-lOm" firstAttribute="centerX" secondItem="rkL-cd-EaC" secondAttribute="centerX" multiplier="0.5" id="ZNq-8B-4dy"/>
+                            <constraint firstItem="U7s-TF-tof" firstAttribute="centerX" secondItem="rkL-cd-EaC" secondAttribute="centerX" multiplier="1.5" id="bBS-Mg-hTk"/>
+                            <constraint firstItem="ykr-RP-Dzl" firstAttribute="centerX" secondItem="rkL-cd-EaC" secondAttribute="centerX" multiplier="0.5" id="lgj-BY-mN8"/>
+                            <constraint firstItem="G5m-AX-lOm" firstAttribute="top" secondItem="8w9-C9-l9k" secondAttribute="bottom" constant="40" id="nNb-yL-lwi"/>
+                            <constraint firstItem="GII-K8-bUU" firstAttribute="bottom" secondItem="acx-6D-lRz" secondAttribute="bottom" constant="20" id="oUA-RI-whk"/>
+                            <constraint firstItem="8w9-C9-l9k" firstAttribute="centerX" secondItem="rkL-cd-EaC" secondAttribute="centerX" id="t2l-sz-XS8"/>
+                            <constraint firstItem="8w9-C9-l9k" firstAttribute="top" secondItem="GII-K8-bUU" secondAttribute="top" constant="10" id="tlT-An-jeL"/>
+                            <constraint firstItem="8sr-w4-jQ4" firstAttribute="top" secondItem="U7s-TF-tof" secondAttribute="bottom" constant="40" id="v0l-nv-pia"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnJugar" destination="acx-6D-lRz" id="TSq-ds-DdD"/>
+                        <outletCollection property="btnTablero" destination="G5m-AX-lOm" collectionClass="NSMutableArray" id="cRd-qK-MTz"/>
+                        <outletCollection property="btnTablero" destination="U7s-TF-tof" collectionClass="NSMutableArray" id="jkX-kl-CZW"/>
+                        <outletCollection property="btnTablero" destination="ykr-RP-Dzl" collectionClass="NSMutableArray" id="QN9-xl-G5U"/>
+                        <outletCollection property="btnTablero" destination="8sr-w4-jQ4" collectionClass="NSMutableArray" id="iWm-dD-jMC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzM-QK-jXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860.93023255813955" y="3.8626609442060089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="simon_dice.png" width="186" height="124.80042266845703"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
